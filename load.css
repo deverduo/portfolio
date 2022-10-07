@@ -1,13 +1,15 @@
 .load_rocket{
-    position: absolute;
     transform: scale(0);
+    position: absolute;
     opacity: 0;
     background-color: white;
     height: 100%;
     width: 100%;
     top: 0;
     text-align: center;
-    z-index: 999999;
+    z-index: 9999;
+    animation: monter 5s ease-in-out;
+
 }
 .img_rocket{
     position: relative;
@@ -15,10 +17,6 @@
     width: 200px;
 }
 
-.monte{
-    animation: monter 5s ease-in-out;
-
-}
 @keyframes monter {
     0%{
         transform: scale(1);
@@ -28,6 +26,7 @@
    100%{
         transform: translateY(-300vh);
         opacity: 0;
+
    }
 }
 .curve{

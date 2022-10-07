@@ -8,7 +8,6 @@
     grid-template-columns: 60% 40%;
     column-gap: 40px;
     background-color: transparent;
-    z-index: 999;
     border: none;
    
 }
