@@ -1,0 +1,37 @@
+
+
+
+.caroussel{
+    position: relative;
+    height: 500px;
+    width: 80%;
+    margin: 10%;
+    justify-content: center;
+    box-shadow: 1px 1px 6px rgb(0 0 0 / 30%);
+}
+
+.caroussel_img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.fade{
+    -webkit-animation: 1.5s fade;
+    animation: 1.5s fade;
+}
+
+@-webkit-keyframes fade{
+    form{opacity: 0.2;}
+    to{opacity: 1;}
+}
+
+@keyframes fade{
+    form{opacity: 0.2;}
+    to{opacity: 1;}
+}

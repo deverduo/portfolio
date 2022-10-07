@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>PORTFOLIO</title>
+        <link rel="stylesheet" href="port.css" media="all">
+    </head>
+    <body>
+        <div class="home">
+            <div class="nav">
+                
+                <a href="about.html"><div class="ancre2">
+                    <h3 class="nav_txt">ABOUT <span></span></h3>
+                </div>
+                </a>
+                <a href="projects.html"><div class="ancre1">
+                    <h3 class="nav_txt">PROJECTS <span></span></h3>
+                </div>
+                </a>
+            </div>
+            <div class="hello">
+                <p>HELLO, <br>WE ARE  <br><span>DEVER</span></p>
+            </div>
+        </div>
+       
+
+        <script>
+            function stars(){
+                let count = 500;
+                let scene = document.querySelector('.home');
+                let i = 0;
+                while(i<count){
+                    let star = document.createElement("i");
+                    let x = Math.floor(Math.random() * window.innerWidth);
+                    let y = Math.floor(Math.random() * scene.clientHeight);
+                    let duration = Math.random() * 10;
+                    let size = Math.random() * 2;
+
+                    star.style.left = x-10+'px';
+                    star.style.top = y-10+'px';
+                    star.style.width = 1+size+'px';
+                    star.style.height = 1+size+'px';
+
+                    star.style.animationDuration =  5+duration+'s';
+                    star.style.animationDelay = duration+'s';
+
+                    scene.appendChild(star);
+                    i++;
+
+                }
+            }
+            stars();
+        </script>
+        
+    </body>
+</html>

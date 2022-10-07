@@ -1,0 +1,49 @@
+.load_rocket{
+    position: absolute;
+    transform: scale(0);
+    opacity: 0;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    text-align: center;
+    z-index: 999999;
+}
+.img_rocket{
+    position: relative;
+    transform: translateY(-80%);
+    width: 200px;
+}
+
+.monte{
+    animation: monter 5s ease-in-out;
+
+}
+@keyframes monter {
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    
+   100%{
+        transform: translateY(-300vh);
+        opacity: 0;
+   }
+}
+.curve{
+    margin-top: 100%;
+    height: 8000px;
+    width: 300%;
+    margin-left: -100%;
+    border-radius: 50% 50%;
+    background-color: rgb(1, 1, 29);
+    transform: translateY(-5%);
+    border: none;
+}
+@media screen and (max-width: 1024px) {
+    .curve{
+        margin-top: 300%;
+        
+
+    }
+}

@@ -1,0 +1,140 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: modern;
+    margin: 0p;
+    
+}
+
+@font-face { font-family: harmony; src: url('fonts/HARMONY.otf'); } 
+@font-face { font-family: modern; src: url('fonts/Sk-Modernist-Regular.otf'); } 
+@font-face { font-family: courgette; src: url('fonts/ginebra_font.ttf'); } 
+@font-face { font-family: marienda; src: url('fonts/Merienda-Bold.ttf'); } 
+@font-face { font-family: righteous; src: url('fonts/Philosopher-BoldItalic.ttf'); } 
+
+
+
+
+.home{
+    position: absolute;
+    min-height: 100vh;
+    height: max-content;
+    width: 100%;
+    background-image: linear-gradient(to left, black 70%, rgb(1, 1, 29) );
+    top: 0;
+}
+.home i{
+    position: absolute;
+    display: block;
+    background: #fff;
+    border-radius: 50%;
+    animation: animate linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        opacity: 0;
+        transform: translate(0);
+    }
+    10%,90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: translate(-100px);
+    }
+}
+.hello{
+    color: aliceblue;
+    font-size: 10em;
+    height: fit-content;
+    width: fit-content;
+    position: relative; 
+    margin-top: 10%;
+    letter-spacing: 25px;
+    margin-left: 10%;
+    font-family: courgette;
+}
+.hello span{
+    background-image: linear-gradient(to left ,rgb(3, 12, 78),rgb(105, 154, 233), rgb(70, 76, 121));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.nav{
+    color: rgb(115, 117, 119);
+    display: inline;
+    width: 100%;
+    font-family: sans-serif;
+    position: absolute;
+    z-index: 999;
+}
+
+.ancre2 h3,.ancre1 h3{
+    display: inline;
+    float: right;
+    padding-top: 2%;
+    
+    
+}
+.ancre1 h3,.ancre2 h3{
+    transition: border-bottom 0.5s ease-in-out;
+}
+
+.ancre2 h3{
+    margin-right: 10%;
+    margin-left: 3%;
+
+}
+.nav a{
+    text-decoration: none;
+    color: rgb(115, 117, 119);
+    transition: color ease-in-out 0.5s;
+}
+.nav a:hover{
+    color: aliceblue;
+}
+.nav_txt span{
+    display: block;
+    background: #fff;
+    transition: transform ease-in-out 0.3s;
+    bottom: 0%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    transform: scale(0);
+    transform-origin: right;
+}
+.nav a:hover span{
+    transform: scale(1);
+    transform-origin: left;
+}
+
+@media screen and (max-width: 1024px) {
+    .hello{
+        margin-top: 50%;
+    }
+    .home{
+        background-image: linear-gradient(to left, black 50%, rgb(1, 1, 29) );
+
+    }
+    .ancre1 h3, .ancre2 h3{
+        padding-top: 10%;
+        font-size: 2em;
+    }
+}
+@media screen and(max-height: 1024px) {
+    .hello{
+        font-size: 7em;
+    }
+}
+.active{
+    border-bottom: #fff 1px solid;
+    color: aliceblue;
+
+}
+
+
+
+

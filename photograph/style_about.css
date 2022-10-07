@@ -1,0 +1,33 @@
+.about_img{
+    height: 500px;
+    width: 60%;
+    margin: 5%;
+    object-fit: contain;
+}
+
+
+
+.about{
+    display: flex;
+    margin: 30px;
+    justify-items: center;
+    align-items: center;
+}
+
+
+
+.about_text{
+    font-weight: bold;
+    line-height: 25px;
+}
+
+@media screen and (max-width: 1000px){
+    .about{
+        flex-direction: column;
+    }
+    .about_text{
+        margin: 30px;
+        font-size: 15px;
+        line-height: 30px;
+    }
+}

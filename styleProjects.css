@@ -1,0 +1,211 @@
+.project{
+    width: 80%;
+    height: 60vh;
+    position: relative;
+    margin: 10%;
+    margin-top: 15%;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    column-gap: 40px;
+    background-color: transparent;
+    z-index: 999;
+    border: none;
+   
+}
+
+.project_def{
+   background-color: transparent;
+   color: white;
+   text-align: center;
+   padding-top: 30%;
+   font-size: 1.6em;
+   line-height: 40px;
+   border: none;
+   height: max-content;
+   animation: flotte 15s linear infinite;
+}
+
+.project_def h3,h4{
+    color: rgb(56, 105, 105);
+
+}
+
+.project_def span{
+    border: 1px solid #fff;
+    padding: 10px;
+    background-color: transparent;
+    height: 45px ;
+    font-size: 25px;
+    width: 150px;
+    text-align: center;
+    color: #fff;
+    transition: background-color .5s ease-in-out;
+}
+
+.project_def a{
+    text-decoration: none; 
+    cursor: pointer;
+}
+
+.project_def span:hover{
+    background-color: #fff;
+    color: black;
+}
+
+
+.project_image{
+    background-color: transparent;
+    contain: content;
+    height: fit-content;
+    animation: bounce 10s linear infinite;    
+   
+}
+
+
+.project_image img{
+    width: 100%;
+    height: 100%;
+    contain: content;
+
+}
+
+.home_projects{
+    position: relative;
+    min-height: 100vh;
+    height: max-content;
+    width: 100%;
+    background-image: linear-gradient(to left, black 70%, rgb(1, 1, 29) );
+    top: 0;
+    overflow: hidden;
+}
+.home_projects i{
+    position: absolute;
+    display: block;
+    background: #fff;
+    border-radius: 50%;
+    animation: animate linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        opacity: 0;
+        transform: translate(0);
+    }
+    10%,90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: translate(-100px);
+    }
+}
+
+.wave,.wave::before,.wave::after{
+    content: '';
+    position: absolute;
+    width: 250vw;
+    height: 250vw;
+    top: 50%;
+    left: 50%;
+    margin-left: -125vw;
+    transform-origin: 50% 20%;
+    background-color: transparent;
+    border-radius: 38% 42%;
+    box-shadow: inset 0 0 10vw rgba(255,0,255,0.8);
+    animation: wave 20s linear infinite;
+}
+.wave::before{
+    width: 105%;
+    height: 95%;
+    margin-top: -125vw;
+    transform-origin: 49% 21%;
+    border-radius: 40% 38%;
+    box-shadow: inset 0 0 10vw rgba(0,255,255,0.8);
+    animation: wave 17s linear infinite;
+
+}
+.wave::after{
+    width: 102%;
+    height: 98%;
+    margin-top: -125vw;
+    transform-origin: 51% 19%;
+    border-radius: 48% 42%;
+    box-shadow: inset 0 0 10vw rgba(255,0,255,0.8);
+    animation: wave 15s linear infinite;
+
+}
+@keyframes wave{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes flotte {
+    0%{
+        transform: rotate(0deg) translate(-30px)rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg)translate(-30px)rotate(-360deg);
+    }
+}
+@keyframes bounce {
+    0%{
+        transform: translateY(-10px);
+    }
+    50%{
+        transform: translateY(20px);
+    }
+    100%{
+        transform: translateY(-10px);
+    }
+}
+
+
+
+.projects :nth-child(odd){
+    grid-auto-flow: column;
+    direction: rtl;
+}
+@media screen and (max-width: 1024px) {
+    .projects :nth-child(odd){
+        grid-template-columns: 1fr  ;
+        grid-auto-flow: row;
+       
+    }
+    .projects :nth-child(even){
+        grid-template-columns: 1fr ;
+
+
+    }
+    .projects :nth-child(1) .project_image{
+        margin-top: 20%;
+    }
+    .project{
+        height: max-content;
+       
+    }
+    .project_def{
+       font-size: 2em;
+    }
+    
+}
+.reveal{
+    transform: translateX(400px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+.reveal2{
+    transform: translateX(-400px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+.reveal.active{
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 99999;
+}
+.reveal2.active{
+    transform: translateX(0);
+    opacity: 1;
+
+}

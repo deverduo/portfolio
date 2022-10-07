@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       
+        <title>PROJECTS</title>
+        <link rel="stylesheet" href="port.css" media="all">
+        <link rel="stylesheet" href="styleProjects.css" media="all">
+        <link rel="stylesheet" href="load.css" media="all">
+
+    </head>
+    <body>
+        
+        <div class="home_projects">
+            <div class="wave"></div>
+            
+            <div class="nav">
+                <a href="about.html"><div class="ancre2">
+                    <h3 class="nav_txt"> ABOUT <span></span></h3>
+                </div>
+                </a>
+                <a href="projects.html"><div class="ancre1">
+                    <h3 class="nav_txt active">PROJECTS</h3>
+                </div>
+                </a>
+            </div>
+            <div class="projects">
+            <div class="project">
+                <div class="project_image">
+                    <img src="images/dzPharmacy.jpg" alt="">
+                </div>
+                <div class="project_def ">
+                    <h3>E-commerce website <br></h3>
+                    A fully working dynamic e-commerce website <br> With admin authentification and dashboard to control <br>all featured products and sells <br> 
+                    <h4>HTML/CSS/JAVASCRIPT/PHP/MYSQL</h4>
+                    <br>
+                    <br>   
+                    <a href="">
+                        <span>
+                            visit website
+                        </span>
+                    </a>
+                </div>
+                
+            </div>
+            <div class="project reveal2" >
+                
+                <div class="project_image">
+                    <img src="images/graham.png" alt="">
+                </div>
+                <div class="project_def">
+                        <h3>Photographer portfolio  <br></h3>
+                        A simple and classy website to  <br> showcase a photographer's work<br>on style <br> 
+                        <h4>HTML/CSS/JAVASCRIPT</h4>
+                        <br>    
+                        <br>
+                        <a href="photograph/index.html">
+                            <span>
+                                visit website
+                            </span>
+                        </a> 
+                    </div>
+            </div> 
+            <div class="project reveal">
+                <div class="project_image">
+                    <img src="images/space-game2.png" alt="">
+                </div>
+                <div class="project_def ">
+                    <h3>Space invaders game <br></h3>
+                    The famous arcade game <br> Space invadors made<br>into a web app<br> 
+                    <h4>HTML/CSS/JAVASCRIPT</h4>
+                    <br>    
+                    <br>    
+                    <a href="space_invaders/index.html">
+                        <span>visit website</span>
+                    </a>
+                </div>
+                
+            </div>
+         </div>
+        
+            <div class="load_rocket">
+                <div class="curve"><img src="images/launch.png" alt="" class="img_rocket"> </div> 
+            </div>
+        
+                      
+        </div>
+                
+    </body>
+    <script src="js/fade.js"></script>
+        <script src="js/reveal.js"></script>
+        <script>
+            function stars(){
+                let count = 500;
+                let scene = document.querySelector('.home_projects');
+                let i = 0;
+                while(i<count){
+                    let star = document.createElement("i");
+                    let x = Math.floor(Math.random() * window.innerWidth);
+                    let y = Math.floor(Math.random() * scene.clientHeight);
+                    let duration = Math.random() * 10;
+                    let size = Math.random() * 2;
+
+                    star.style.left = x-10+'px';
+                    star.style.top = y-10+'px';
+                    star.style.width = 1+size+'px';
+                    star.style.height = 1+size+'px';
+
+                    star.style.animationDuration =  5+duration+'s';
+                    star.style.animationDelay = duration+'s';
+
+                    scene.appendChild(star);
+                    i++;
+
+                }
+            }
+            stars();
+        </script>
+        <script>
+            const load = document.querySelector('.load_rocket');
+            window.addEventListener('load', () => {
+                load.classList.add('monte');
+            })
+        </script>
+        </html>
+</html>

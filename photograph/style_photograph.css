@@ -1,0 +1,41 @@
+.photographs{
+    display: grid;
+    width: 80%;
+    margin: 10%;
+    grid-template-columns: 25% 35% 25%;
+    row-gap: 20px;
+    column-gap: 20px;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1000px){
+    .photographs{
+        grid-template-columns:  40% 40%;
+    }
+}
+
+.photograph{
+    margin: 20px;
+    width: 100%;
+    max-height: fit-content;
+    box-shadow: 1px 1px 6px rgb(0 0 0 / 30%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.photograph:hover{
+    transform: scale(1.5);
+    opacity: 1;
+}
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+.reveal.active{
+    transform: translateX(0);
+    opacity: 1;
+}
