@@ -26,6 +26,7 @@
     position: relative;
     overflow: hidden;
     border-radius: 50%;
+    align-items: center;
 }
 
 .img_crop > img{
